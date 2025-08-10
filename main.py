@@ -6,8 +6,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from langgraph.errors import GraphRecursionError
 from langchain_core.messages import HumanMessage, AIMessage
-from copilotkit import CopilotKitRemoteEndpoint, Action as CopilotAction
+from copilotkit import Action as CopilotAction
 from copilotkit.integrations.fastapi import add_fastapi_endpoint
+from copilotkit import CopilotKitRemoteEndpoint, Action
 
 from schemas import ChatRequest, TravelPlan
 from tools.weather_tool import get_weather
